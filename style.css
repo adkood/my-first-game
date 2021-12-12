@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+body{
+    overflow: hidden;
+}
+
+.gameContainer{
+    /* background-color: blue; */
+    background-image: url(bg.jpg);
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    width: 100wh;
+    height: 100vh;
+
+    /* background-size: 100vh 100wh; */
+}
+
+.boy{
+    background-image: url(boy.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100px;
+    height: 140px;
+    position: absolute;
+    bottom: 0;
+    left: 140px;
+}
+
+.obstacle{
+    background-image: url(shark.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 260px;
+    height: 120px;
+    position: absolute;
+    bottom: 0;
+    right:70px;
+
+}
+
+#gameOver{
+    /* visibility: hidden; */
+    position: relative;
+    top: 50px;
+    left: 300px;
+    font-size: 27px;
+    color:red;
+    font-weight:bolder;
+}
+
+#scoreCont{
+    position: absolute;
+    top: 6px;
+    right: 10px;
+    font-size: 22px;
+    font-weight: bolder;
+    border: 2px solid black;
+    width: 126px;
+}
+
+.animateBoy{
+    animation: boy 0.6s linear;
+}
+
+.obstacleAni{
+    animation: obstacleAni 4s linear infinite;
+}
+
+@keyframes boy{
+    0%{
+        bottom: 0;
+    }
+
+    50%{
+        bottom: 260px;
+    }
+
+    100%{
+        bottom: 0;
+    }
+}
+
+@keyframes obstacleAni{
+    0%{
+        left: 100vw;
+    }
+    100%{
+        left: -10vh;
+    }
+}
